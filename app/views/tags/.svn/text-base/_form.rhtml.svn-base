@@ -1,0 +1,43 @@
+<%= error_messages_for 'tag' %>
+
+<!--[form:tag]-->
+<p><label for="tag_album">Album</label><br/>
+<%= text_area 'tag', 'album'  %></p>
+
+<p><label for="tag_artist">Artist</label><br/>
+<%= text_area 'tag', 'artist'  %></p>
+
+<p><label for="tag_composer">Composer</label><br/>
+<%= text_area 'tag', 'composer'  %></p>
+
+<p><label for="tag_conductor">Conductor</label><br/>
+<%= text_area 'tag', 'conductor'  %></p>
+
+<p><label for="tag_date">Date</label><br/>
+<%= text_area 'tag', 'date'  %></p>
+
+<p><label for="tag_genre">Genre</label><br/>
+<%= text_area 'tag', 'genre'  %></p>
+
+<p><label for="tag_performer">Performer</label><br/>
+<%= text_area 'tag', 'performer'  %></p>
+
+<p><label for="tag_publisher">Publisher</label><br/>
+<%= text_area 'tag', 'publisher'  %></p>
+
+<p><label for="tag_remixed">Remixed</label><br/>
+<%= text_area 'tag', 'remixed'  %></p>
+
+<p><label for="tag_time">Time</label><br/>
+<%= text_area 'tag', 'time'  %></p>
+
+<p><label for="tag_track">Track</label><br/>
+<%= text_field 'tag', 'track'  %></p>
+
+<p><label for="tag_year">Year</label><br/>
+<%= text_field 'tag', 'year'  %></p>
+
+<p><label for="tag_comment">Comment</label><br/>
+<%= text_area 'tag', 'comment'  %></p>
+<!--[eoform:tag]-->
+

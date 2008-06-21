@@ -1,0 +1,16 @@
+<%= error_messages_for 'track' %>
+
+<!--[form:track]-->
+<p><label for="track_number">Number</label><br/>
+<%= text_field 'track', 'number'  %></p>
+
+<p><label for="track_title">Title</label><br/>
+<%= text_field 'track', 'title'  %></p>
+
+<p><label for="track_length_sec">Length sec</label><br/>
+<%= text_field 'track', 'length_sec'  %></p>
+
+<p><label for="track_length_hms">Length hms</label><br/>
+<%= text_field 'track', 'length_hms'  %></p>
+<!--[eoform:track]-->
+

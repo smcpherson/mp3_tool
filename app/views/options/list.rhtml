@@ -1,0 +1,30 @@
+<h1>Listing options</h1>
+
+<table>
+  <tr>
+  <% for column in Option.content_columns %>
+    <% unless column.human_name == 'Comment' ||  column.human_name == 'Value' || column.human_name == 'Added At' %>
+      <th align=left><%= column.human_name %></th>
+    <% end %> 
+  <% end %>
+  </tr>
+  
+<% for option in @options %>
+  <tr>
+  <% for column in Option.content_columns %>
+    <% unless column.human_name == 'Comment' ||  column.human_name == 'Value' || column.human_name == 'Added At' %>
+       <td><%=h option.send(column.name) %></td>
+     <% end %>
+    <% end %>
+    <td><%= link_to 'Edit', :action => 'edit', :id => option %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => option }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @option_pages.current.previous } if @option_pages.current.previous %>
+<%= link_to 'Next page', { :page => @option_pages.current.next } if @option_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New option', :action => 'new' %>

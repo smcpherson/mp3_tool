@@ -1,0 +1,50 @@
+8
+
+dir
+12
+http://192.168.0.10/svn/mp3_tool/public/stylesheets
+http://192.168.0.10/svn
+
+
+
+2007-05-11T08:11:18.308900Z
+1
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f163bf01-2b30-0410-a54e-d703f3e25201
+
+basic.css
+file
+
+
+
+
+2007-05-11T20:43:02.533838Z
+8758da1a10bf826ff8b53e7ecbc72b88
+2007-05-11T08:11:18.308900Z
+1
+
+scaffold.css
+file
+
+
+
+
+2007-05-11T20:43:02.549590Z
+70e729685fb3ef28f5db5035a50567eb
+2007-05-11T08:11:18.308900Z
+1
+

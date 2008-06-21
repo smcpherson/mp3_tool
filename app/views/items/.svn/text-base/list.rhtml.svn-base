@@ -1,0 +1,27 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+  <% for column in Item.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for item in @items %>
+  <tr>
+  <% for column in Item.content_columns %>
+    <td><%=h item.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => item %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => item %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => item }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @item_pages.current.previous } if @item_pages.current.previous %>
+<%= link_to 'Next page', { :page => @item_pages.current.next } if @item_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New item', :action => 'new' %>

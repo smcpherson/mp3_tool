@@ -1,0 +1,36 @@
+<% unless @result.nil? %>
+  <p>Matched USING query#<%= @attempt-1 %>
+    <table class="matches">
+      <tr>
+        <th>ID</th>
+        <th>Artist</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>Tracks</th>
+        <th>H:M:S</th>
+        <th>Seconds</th>
+        <th>&nbsp;</th>
+      </tr>
+      <% for match in @result  %>
+      <tr>
+        <td><%= match[:diskid] %></td>
+        <td><%= match[:artist] %></td>
+        <td><%= match[:title] %></td>
+        <td><%= match[:genre] %></td>
+        <td><%= match[:year] %></td>
+        <td><%= match[:track_count] %></td>
+        <td><%= match[:length_hms] %></td>
+        <td><%= match[:length_sec] %></td>
+        <td><%= link_to_remote( "[more]",
+                               :update => "tracks_#{match[:id]}",
+                               :url => { :action => :folder_tracks, :params => {:id => match[:id]}},
+                               :complete => "matchedAlbumShowTracksClicked(#{match[:id]})"
+                                ) %>        
+        </td>
+      <tr><td id="tracks_<%= match[:id] %>" class='tracks' colspan=99></td></tr>
+      </tr>
+      <% end  %>
+    </table>
+  </p>    
+<% end %>

@@ -1,0 +1,2 @@
+<p><b>Processing:</b> <i><%= @process_path %></i><br />
+<%= @output %>

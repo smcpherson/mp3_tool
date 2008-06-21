@@ -1,0 +1,47 @@
+body {
+background: url('/images/bg_bargraph-trans.png') top repeat-x;
+color: #443831;
+}
+body, table, tr, td {font: normal 13px/1.2 "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;}
+
+#head     {margin:0px; padding:0px;}
+#head h1  {font-size:1.5em; display:inline; float:left;}
+#head p   {font-size:.7em; display:inline; float:right;}
+#main {
+	background: #F2F1F0 url('/images/bg_main-trans.png') repeat-x;
+	border-right-width: 0;
+	border-color: #F2F1F0;
+	border-bottom: none;
+	margin:auto; margin-top:10px;
+	padding: 0 0 20px 10px;
+	width: 90%;
+	}
+
+#main dl     {width:100%; margin-top:0px;}
+#main dt     {font-weight:bold;}
+#main dd     {text-align:left;}
+#main h2     {font-size:1em; margin-bottom:4px; border-bottom:1px outset black;}
+#main h2 a   {font-size:.7em;}
+
+.folder      {background-color:#CCC; background-image:url('/images/folder_closed.gif'); background-repeat:no-repeat; padding-left:20px; margin-left:5px;}
+.tracks      {background-color:#EEE; border:1px black solid; width:100%;}
+.tracks TH   {text-align:left;}
+.tracks_head {text-align:left; background-color:orange;}
+
+.matches      {background-color:#EEE; font-size:1em; border:1px black solid; width:100%;}
+.matches TH   {text-align:left;}
+.matches .tracks {background-color:orange;}
+
+.file        {background-image:url('/images/docIconSm_audio.gif'); background-repeat:no-repeat; padding-left:20px;}
+.folder_info {font-size:10px; background-color:#EEE; padding-left:2px; padding-right:2px;}
+.missing     {color:red !important; font-weight:bold !important;}
+
+.trackRowHover {background-color:#FFDF80 !important; color:black;}
+
+
+.clear       {clear:both;}
+/*
+http://insights.epocrates.com/wp-content/themes/insights/style.css
+http://insights.epocrates.com/wp-content/themes/insights/img/bg_main-trans.png
+http://insights.epocrates.com/wp-content/themes/insights/img/bg_bargraph-trans.png
+*/

@@ -1,0 +1,10 @@
+<%= error_messages_for 'option' %>
+
+<!--[form:option]-->
+<p><label for="option_name">Name</label> <%= text_field 'option', 'name', {'style' => 'width:500px;'}   %></p>
+<p><label for="option_value">Value</label> <%= text_field 'option', 'value', {'style' => 'width:500px;'}  %></p>
+<p><label for="option_comment">Comment</label> <%= text_area 'option', 'comment', {'rows' => 3} %></p>
+<p><label for="option_added_at">Added</label> <%= @option.added_at  %></p>
+<p><label for="option_added_at">Modified</label> <%= @option.updated_at  %></p>
+<!--[eoform:option]-->
+

@@ -1,0 +1,43 @@
+<i><%= @process_path %></i>
+<% i=0; for folder in @folders %>
+  <div class='folder' id='folder_<%= i %>'><a href='#' onclick="folderClicked(<%= i %>);"><%= folder.name %></a>
+
+    <%= link_to_remote( " [search]",
+                        {
+                          :url => { :action => :folder_ajax, :params => {:folder => folder.name, :id => folder.id}},
+                          :update => "folder_#{i}_contents",
+                          :complete => "folderNameClicked(#{i})",
+                          :loading => "Element.show('folder_#{i}_files'); Element.hide('folder_#{i}_contents'); Element.show('wait_#{i}')",
+                          :loaded =>  "Element.hide('wait_#{i}'); Element.show('folder_#{i}_contents'); "
+                        },
+                        {'id' =>"parse_#{i}"}
+                      ) 
+    %>
+    <div id='folder_<%= i %>_files' style='display:none;'>
+      <table class="tracks">
+        <tr><th>Filename</th><th>Track</th><th>Album</th><th>Artist</th><th>Year</th><th>Genre</th><th>Seconds</th></tr>
+        <% @items = Item.find_by_sql("SELECT * FROM items where folder_id = #{folder.id}") %>
+        <% total_sec = 0 %>
+        <% for item in @items  %>
+          <tr onMouseOver="classOn(this, 'trackRowHover');" onMouseOut="classOff(this,'trackRowHover');">
+          <td><div class='file'><a href="/<%= item.name %>"><%= item.name %></a></div></td>
+          <% @tags = Tag.find_by_sql("SELECT * FROM tags where item_id = #{item.id}") %>
+          <% for tag in @tags %>
+            <td><%= tag.track %></td>
+            <td><%= tag.album %></td>
+            <td><%= tag.artist %></td>
+            <td><%= tag.year %></td>
+            <td><%= tag.genre %></td>
+          <% end %>  
+          <td><%= item.length_sec %></td>
+          <% total_sec += item.length_sec %>
+          </tr>
+        <% end %>  
+      </table>
+      Total Seconds: <%= total_sec %>
+      <div id="wait_<%=i%>" style='display:none'>Searching...</div>
+      <div id="folder_<%=i%>_contents"></div>
+      
+    </div>
+  </div>
+<% i += 1; end %>

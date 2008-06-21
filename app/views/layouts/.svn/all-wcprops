@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/1/mp3_tool/app/views/layouts
+END
+options.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1/mp3_tool/app/views/layouts/options.rhtml
+END
+folders.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/1/mp3_tool/app/views/layouts/folders.rhtml
+END
+tags.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/1/mp3_tool/app/views/layouts/tags.rhtml
+END
+items.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1/mp3_tool/app/views/layouts/items.rhtml
+END
+albums.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1/mp3_tool/app/views/layouts/albums.rhtml
+END
+index.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/1/mp3_tool/app/views/layouts/index.rhtml
+END
+tracks.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/1/mp3_tool/app/views/layouts/tracks.rhtml
+END

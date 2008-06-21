@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/1/mp3_tool/test/fixtures
+END
+items.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/1/mp3_tool/test/fixtures/items.yml
+END
+albums.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1/mp3_tool/test/fixtures/albums.yml
+END
+tracks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/1/mp3_tool/test/fixtures/tracks.yml
+END
+options.yml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1/mp3_tool/test/fixtures/options.yml
+END
+folders.yml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/1/mp3_tool/test/fixtures/folders.yml
+END
+tags.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/1/mp3_tool/test/fixtures/tags.yml
+END

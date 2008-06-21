@@ -1,0 +1,9 @@
+<h1>Editing album</h1>
+
+<% form_tag :action => 'update', :id => @album do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @album %> |
+<%= link_to 'Back', :action => 'list' %>

@@ -1,0 +1,22 @@
+<html>
+<head>
+  <!-- <LINK REL="SHORTCUT ICON" HREF="http://smcpherson-xp.corp.epocrates.com:3000/favicon.ico"> -->
+  <title>myMP3tool: <%= @page_title %></title>
+  <%= stylesheet_link_tag 'basic' %>             <!-- basic style -->
+  <%= javascript_include_tag 'prototype' %>      <!-- "prototype" javascript module -->
+  <%= javascript_include_tag 'scriptaculous' %>  <!-- "scriptaculous" javascript module (requires prototype) -->
+  <%= javascript_include_tag 'custom' %>         <!-- other custom javascript file -->
+</head>
+<body>
+
+<div id="main">
+  <div id="head">
+    <h1><a href="/">my MP3 Tool</a></h1><p><a href="/options">[Manage]</a></p>
+    <div class="clear"></div>
+  </div>
+  <%= @content_for_layout %>
+  
+</div>	
+
+</body>
+</html>

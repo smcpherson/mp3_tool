@@ -1,0 +1,11 @@
+<table class="matches">
+  <tr><th>#</th><th>Title</th><th>Length (seconds)</th><th>Length (H:M:S)</th></tr>
+  <% for track in @tracks  %>
+    <tr onMouseOver="classOn(this, 'trackRowHover');" onMouseOut="classOff(this,'trackRowHover');">
+        <td><%= track[:number] %></td>
+        <td><%= track[:title] %></td>
+        <td><%= track[:length_sec] %></td>
+        <td><%= track[:length_hms] %></td>
+    </tr>
+  <% end %>  
+</table>

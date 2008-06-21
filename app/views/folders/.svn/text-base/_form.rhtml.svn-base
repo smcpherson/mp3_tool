@@ -1,0 +1,19 @@
+<%= error_messages_for 'folder' %>
+
+<!--[form:folder]-->
+<p><label for="folder_name">Name</label><br/>
+<%= text_area 'folder', 'name'  %></p>
+
+<p><label for="folder_full_path">Full path</label><br/>
+<%= text_area 'folder', 'full_path'  %></p>
+
+<p><label for="folder_artist">Artist</label><br/>
+<%= text_area 'folder', 'artist'  %></p>
+
+<p><label for="folder_title">Title</label><br/>
+<%= text_area 'folder', 'title'  %></p>
+
+<p><label for="folder_year">Year</label><br/>
+<%= text_area 'folder', 'year'  %></p>
+<!--[eoform:folder]-->
+

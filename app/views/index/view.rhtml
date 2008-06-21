@@ -1,0 +1,6 @@
+<%= link_to_remote( "Click to Start --&gt;",
+                   :update => "main_folder_listing",
+                   :url => { :action => :processing_begin},
+                   :loading => "hide(this); startClicked();"
+                    ) %>
+<div id="main_folder_listing"></div>

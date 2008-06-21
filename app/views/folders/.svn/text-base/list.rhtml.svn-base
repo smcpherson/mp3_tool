@@ -1,0 +1,27 @@
+<h1>Listing folders</h1>
+
+<table>
+  <tr>
+  <% for column in Folder.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for folder in @folders %>
+  <tr>
+  <% for column in Folder.content_columns %>
+    <td><%=h folder.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => folder %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => folder %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => folder }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @folder_pages.current.previous } if @folder_pages.current.previous %>
+<%= link_to 'Next page', { :page => @folder_pages.current.next } if @folder_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New folder', :action => 'new' %>
